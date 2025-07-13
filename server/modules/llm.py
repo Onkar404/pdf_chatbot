@@ -19,7 +19,7 @@ def get_llm_chain(retriever):
         template="""
 You are an intelligent and helpful assistant designed to answer user questions based solely on the provided document content.
 
-Please ensure your answers are accurate, concise, and strictly grounded in the context below helpful responses based **only on the provided context**.
+Please ensure your answers are accurate, concise, and strictly grounded in the context below helpful responses.
 
 ---
 
@@ -37,6 +37,7 @@ Please ensure your answers are accurate, concise, and strictly grounded in the c
 - If the answer is not available in the provided content, say:
   "I'm sorry, but I couldn't find relevant information in the provided document."
 - Do NOT guess or fabricate information not present in the context.
+ - but you can guess little
 """
     )
 
